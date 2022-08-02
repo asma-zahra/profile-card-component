@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.attribution a {
+  color: hsl(230, 38%, 16%);
+}
+body{
+    font-family: "Kumbh Sans", sans-serif;
+    font-size:18px;
+    background-color: hsl(185, 75%, 39%);
+    min-height: calc(100vh - 0.1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+    overflow: hidden; 
+}
+/* pattern is circle image. but we have to make it half circle with css. make parent overflow hidden to skip scroll  */
+.bg-top-pattern{
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    z-index: -1;
+}
+.bg-bottom-pattern{
+    position: absolute;
+    bottom: -50%;
+    right: -20%;
+    z-index: -1;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.card{
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+.card article:first-child img{
+    border-radius: 1rem 1rem 0 0;
+}
+.card article:first-child{
+    position: relative;
+}
+/* center the profile pic with rounded and bordered pic */
+.card article:first-child div img{
+    border-radius: 50%;
+    width: 5rem;
+    position: absolute;
+    left: 50%;
+    bottom: -2rem;
+    transform: translateX(-50%);
+    border: 5px solid #fff;
+}
+/* card content  */
+.card article:nth-child(2){
+    padding: 3rem 0 1rem 0;
+    text-align: center;
+}
+.card article:nth-child(2) h1{
+    color: hsl(229, 23%, 23%); 
+}
+.card article:nth-child(2) span,
+.card article:nth-child(2) p{
+    color: hsl(227, 10%, 46%); 
+    font-weight: 400;
+}
+.card article:nth-child(2) p{
+    margin-top: 1rem;
+}
+
+/* card 3rd part profile info list */
+ul{
+    list-style: none;
+}
+
+.card article:nth-child(3){
+    border-top: 2px solid hsl(227, 10%, 46%, 0.2);
+    padding: 1rem 0;
+}
+.card article:nth-child(3) ul{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.card article:nth-child(3) ul li{
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+    font-size: 1.4rem;
+}
+
+.card article:nth-child(3) ul span{
+    display: block;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color:hsl(227, 10%, 46%);
+    letter-spacing: 0.15rem;
+    margin-top: 0.3rem;
+}
+
